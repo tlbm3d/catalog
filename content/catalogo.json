@@ -1,4 +1,16 @@
 {
-  "categories": [],
-  "products": []
+  "categories": [
+    {
+      "name": "Test"
+    }
+  ],
+  "products": [
+    {
+      "active": true,
+      "price": 10,
+      "description": "Comemos uma maçã ",
+      "name": "Teste 1",
+      "category": "Test"
+    }
+  ]
 }
