@@ -1,16 +1,17 @@
 {
   "categories": [
     {
-      "name": "Test"
+      "name": "Brinquedos variados"
     }
   ],
   "products": [
     {
       "active": true,
-      "price": 10,
-      "description": "Comemos uma maçã ",
-      "name": "Teste 1",
-      "category": "Test"
+      "name": "Springy Dacshund",
+      "description": "Créditos a: C47_3d - Printables\nhttps://www.printables.com/model/1884386-springy-dachshund",
+      "price": 25,
+      "image": "/images/img_1753.jpeg",
+      "category": "Brinquedos variados"
     }
   ]
 }
