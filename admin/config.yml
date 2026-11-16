@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: SEU_USUARIO/SEU_REPOSITORIO
+  branch: main
+  base_url: https://SEU-WORKER.workers.dev
+  auth_endpoint: auth
+
+media_folder: "images"
+public_folder: "/images"
+
+locale: "pt"
+
+publish_mode: simple
+
+collections:
+  - name: "catalogo"
+    label: "Catálogo da loja"
+    files:
+      - name: "dados"
+        label: "Produtos e categorias"
+        file: "content/catalogo.json"
+        format: "json"
+        fields:
+          - label: "Categorias"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - { label: "Nome da categoria", name: "name", widget: "string" }
+          - label: "Produtos"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.price}}"
+            fields:
+              - { label: "Nome", name: "name", widget: "string" }
+              - { label: "Descrição", name: "description", widget: "text", required: false }
+              - { label: "Preço (R$)", name: "price", widget: "number", value_type: "float", min: 0, step: 0.01 }
+              - { label: "Foto", name: "image", widget: "image", required: false }
+              - { label: "Categoria (escreva exatamente como cadastrada acima)", name: "category", widget: "string" }
+              - { label: "Produto visível na loja", name: "active", widget: "boolean", default: true }
