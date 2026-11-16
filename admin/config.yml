@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: SEU_USUARIO/SEU_REPOSITORIO
+  repo: tlbm3d/catalog
   branch: main
   base_url: https://tlbm3d-auth.tlbm3d.workers.dev
   auth_endpoint: /auth
