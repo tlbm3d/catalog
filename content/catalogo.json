@@ -1,4 +1,17 @@
 {
-  "categories": [],
-  "products": []
+  "categories": [
+    {
+      "name": "Cubos"
+    }
+  ],
+  "products": [
+    {
+      "active": true,
+      "name": "Infinity Cube | Cubo Infinito",
+      "description": "Dobre o cubo infinitas vezes: não vai acabar!\nCréditos: Austin Vojta | Printables\nhttps://www.printables.com/model/928-yet-another-fidget-infinity-cube-v2",
+      "price": 22,
+      "image": "/images/img_1754.jpeg",
+      "category": "Cubos"
+    }
+  ]
 }
