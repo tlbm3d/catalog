@@ -2,6 +2,9 @@
   "categories": [
     {
       "name": "Fidget toys - Cubos"
+    },
+    {
+      "name": "Fidget Toys - Twist"
     }
   ],
   "products": [
@@ -12,6 +15,14 @@
       "price": 22,
       "image": "blob:https://tlbm3d.github.io/e006570c-3666-4e57-b585-8fb7f142348c",
       "category": "Fidget toys - Cubos"
+    },
+    {
+      "active": true,
+      "name": "Ovo de dragão",
+      "description": "Twist o ovo - é satisfatório\nCréditos: nixkor\nprintables.com/model/1616812",
+      "price": 25,
+      "image": "blob:https://tlbm3d.github.io/c3b803cd-3f5e-4049-b190-cf98f65fe3cd",
+      "category": "Fidget Toys - Twist"
     }
   ]
 }
