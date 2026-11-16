@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="TLBM 3D — loja de impressões 3D.">
+  <title>TLBM 3D | Impressões 3D</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="TLBM 3D - início">
+      <img src="logo.png" alt="Logo TLBM 3D" onerror="this.style.display='none';document.querySelector('.brand-fallback').hidden=false">
+      <span class="brand-fallback" hidden>TLBM <b>3D</b></span>
+    </a>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#personalizado">Outro modelo</a>
+      <a href="#entrega">Entrega</a>
+    </nav>
+    <button class="cart-open" id="openCart" aria-label="Abrir carrinho">Carrinho <span id="cartCount">0</span></button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">IMPRESSÃO 3D • FEITO SOB PEDIDO</p>
+      <h1>Ideias que ganham<br><span>forma.</span></h1>
+      <p>Peças e acessórios impressos em 3D. Escolha no catálogo ou envie um modelo para orçamento.</p>
+      <a class="button button-light" href="#catalogo">Explorar catálogo <span>↓</span></a>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NOSSO CATÁLOGO</p>
+          <h2>Encontre sua próxima peça.</h2>
+        </div>
+        <p class="muted" id="productCount">Carregando produtos…</p>
+      </div>
+
+      <div class="catalog-tools">
+        <label class="search-box" for="productSearch">
+          <span class="search-icon" aria-hidden="true">⌕</span>
+          <input
+            id="productSearch"
+            type="search"
+            placeholder="Buscar produto… (mesmo com pequenos erros)"
+            autocomplete="off"
+          >
+          <button
+            type="button"
+            id="clearSearch"
+            class="clear-search"
+            aria-label="Limpar pesquisa"
+            hidden
+          >×</button>
+        </label>
+      </div>
+
+      <div class="filters" id="categoryFilters" aria-label="Filtrar por categoria"></div>
+
+      <div class="product-grid" id="productGrid">
+        <div class="empty-state">Carregando catálogo…</div>
+      </div>
+    </section>
+
+    <section class="custom-section" id="personalizado">
+      <div>
+        <p class="eyebrow">NÃO ENCONTROU O QUE PROCURA?</p>
+        <h2>Seu modelo.<br><span>Nossa impressão.</span></h2>
+        <p>Explore modelos 3D em uma plataforma externa. Quando encontrar o que deseja, copie o link e envie para a TLBM 3D pelo Instagram para avaliarmos a impressão.</p>
+        <a class="button button-light" href="https://www.printables.com/" target="_blank" rel="noopener">Explorar modelos 3D ↗</a>
+      </div>
+      <div class="custom-note">
+        <span class="note-icon">＋</span>
+        <strong>Impressão sob consulta</strong>
+        <p>Preço, material, tamanho e prazo são confirmados pelo Instagram após analisarmos o modelo.</p>
+      </div>
+    </section>
+
+    <section class="section delivery" id="entrega">
+      <p class="eyebrow">COMO RECEBER</p>
+      <h2>Entrega combinada com você.</h2>
+      <div class="delivery-grid">
+        <article>
+          <span>01</span>
+          <h3>Local combinado</h3>
+          <p>Podemos combinar um local para a entrega.</p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Uber Envios</h3>
+          <p>Envio por Uber Envios, conforme disponibilidade e região.</p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Correios</h3>
+          <p>Envio pelos Correios, com frete e prazo a combinar.</p>
+        </article>
+      </div>
+      <p class="delivery-foot">A forma de entrega, o frete, o pagamento e o prazo serão confirmados pelo Instagram antes da produção.</p>
+    </section>
+  </main>
+
+  <footer>
+    <a class="footer-brand" href="#">TLBM 3D</a>
+    <p>Impressões 3D • Feito sob pedido</p>
+    <a href="https://www.instagram.com/tlbm.3d/" target="_blank" rel="noopener">@tlbm.3d ↗</a>
+    <small>© <span id="year"></span> TLBM 3D</small>
+  </footer>
+
+  <div class="cart-backdrop" id="cartBackdrop" hidden></div>
+
+  <aside class="cart-panel" id="cartPanel" aria-label="Carrinho de compras" aria-hidden="true">
+    <div class="cart-heading">
+      <div>
+        <p class="eyebrow">SEU PEDIDO</p>
+        <h2>Carrinho</h2>
+      </div>
+      <button class="icon-button" id="closeCart" aria-label="Fechar carrinho">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items">
+      <p class="muted">Seu carrinho está vazio.</p>
+    </div>
+
+    <div class="cart-bottom">
+      <div class="subtotal">
+        <span>Subtotal dos produtos</span>
+        <strong id="cartSubtotal">R$ 0,00</strong>
+      </div>
+      <p class="cart-disclaimer">Frete, pagamento e prazo serão combinados pelo Instagram.</p>
+      <button class="button button-light full" id="checkoutButton" disabled>Copiar pedido e abrir Instagram</button>
+      <p class="copy-status" id="copyStatus" role="status"></p>
+    </div>
+  </aside>
+
+  <template id="productTemplate">
+    <article class="product-card">
+      <div class="product-image">
+        <img loading="lazy" alt="">
+        <span class="product-category"></span>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name"></h3>
+        <p class="product-description"></p>
+        <div class="product-buy">
+          <strong class="product-price"></strong>
+          <button class="add-button">Adicionar +</button>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
