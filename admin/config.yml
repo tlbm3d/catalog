@@ -2,8 +2,8 @@ backend:
   name: github
   repo: SEU_USUARIO/SEU_REPOSITORIO
   branch: main
-  base_url: https://SEU-WORKER.workers.dev
-  auth_endpoint: auth
+  base_url: https://tlbm3d-auth.tlbm3d.workers.dev
+  auth_endpoint: /auth
 
 media_folder: "images"
 public_folder: "/images"
