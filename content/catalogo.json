@@ -1,17 +1,17 @@
 {
   "categories": [
     {
-      "name": "Cubos"
+      "name": "Fidget toys - Cubos"
     }
   ],
   "products": [
     {
       "active": true,
       "name": "Infinity Cube | Cubo Infinito",
-      "description": "Dobre o cubo infinitas vezes: não vai acabar!\nCréditos: Austin Vojta | Printables\nhttps://www.printables.com/model/928-yet-another-fidget-infinity-cube-v2",
+      "description": "Dobre o cubo infinitas vezes: não vai acabar!\nCréditos: Austin Vojta\nprintables.com/model/928",
       "price": 22,
       "image": "blob:https://tlbm3d.github.io/e006570c-3666-4e57-b585-8fb7f142348c",
-      "category": "Cubos"
+      "category": "Fidget toys - Cubos"
     }
   ]
 }
