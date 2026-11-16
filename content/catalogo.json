@@ -2,6 +2,9 @@
   "categories": [
     {
       "name": "Test"
+    },
+    {
+      "name": "Sogman 334"
     }
   ],
   "products": [
@@ -11,6 +14,13 @@
       "description": "Comemos uma maçã ",
       "name": "Teste 1",
       "category": "Test"
+    },
+    {
+      "active": true,
+      "name": "Ovo redondo",
+      "description": "LIMITED EDITION",
+      "price": 39450340953840.95,
+      "category": "Sogman 334"
     }
   ]
 }
