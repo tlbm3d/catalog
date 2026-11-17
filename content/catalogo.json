@@ -34,6 +34,14 @@
       "price": 16,
       "image": "/catalog/images/img_1758.jpeg",
       "category": "Fidget Toys"
+    },
+    {
+      "active": true,
+      "category": "Fidget Toys",
+      "name": "Gravity Knife | Faca gravitacional",
+      "description": "ATENÇÃO: não machuca. Ao pressionar, a faca retrai pra dentro.\nCréditos: DjayieJerry_1682973\nprintables.com/model/951574",
+      "price": 16.5,
+      "image": "/catalog/images/img_1759.jpeg"
     }
   ]
 }
