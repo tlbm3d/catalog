@@ -5,6 +5,9 @@
     },
     {
       "name": "Chaveiros"
+    },
+    {
+      "name": "Utilidades | Banheiro"
     }
   ],
   "products": [
@@ -47,6 +50,14 @@
       "price": 9.9,
       "image": "/catalog/images/img_1760.jpeg",
       "category": "Chaveiros"
+    },
+    {
+      "active": true,
+      "name": "Porta-escova de dente",
+      "description": "Utilidade para o sei banheiro.\nCréditos: Funny_things_5654614\nprintables.com/model/1918214",
+      "price": 28.5,
+      "image": "/catalog/images/img_1761.jpeg",
+      "category": "Utilidades | Banheiro"
     }
   ]
 }
