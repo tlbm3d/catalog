@@ -1,13 +1,10 @@
 {
   "categories": [
     {
-      "name": "Fidget toys - Cubos"
-    },
-    {
-      "name": "Fidget Toys - Twist"
-    },
-    {
       "name": "Fidget Toys"
+    },
+    {
+      "name": "Chaveiros"
     }
   ],
   "products": [
@@ -17,7 +14,7 @@
       "description": "Dobre o cubo infinitas vezes: não vai acabar!\nCréditos: Austin Vojta\nprintables.com/model/928",
       "price": 22,
       "image": "/catalog/images/img_1754.jpeg",
-      "category": "Fidget toys - Cubos"
+      "category": "Fidget Toys"
     },
     {
       "active": true,
@@ -25,7 +22,7 @@
       "description": "Twist o ovo - é satisfatório\nCréditos: nixkor\nprintables.com/model/1616812",
       "price": 25,
       "image": "/catalog/images/img_1756.jpeg",
-      "category": "Fidget Toys - Twist"
+      "category": "Fidget Toys"
     },
     {
       "active": true,
@@ -42,6 +39,14 @@
       "description": "ATENÇÃO: não machuca. Ao pressionar, a faca retrai pra dentro.\nCréditos: DjayieJerry_1682973\nprintables.com/model/951574",
       "price": 16.5,
       "image": "/catalog/images/img_1759.jpeg"
+    },
+    {
+      "active": true,
+      "name": "Chaveiro de coração",
+      "description": "Chaveiro de coração low-poly. Escolha a cor!\nCréditos: 3d_creativa\nprintables.com/model/550636",
+      "price": 12,
+      "image": "/catalog/images/img_1760.jpeg",
+      "category": "Chaveiros"
     }
   ]
 }
