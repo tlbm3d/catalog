@@ -26,6 +26,14 @@
       "price": 25,
       "image": "/catalog/images/img_1756.jpeg",
       "category": "Fidget Toys - Twist"
+    },
+    {
+      "active": true,
+      "name": "Spiral Cone",
+      "description": "Cone espiral que se atravessa!\nCréditos: Krakka10\nprintables.com/model/927393",
+      "price": 16,
+      "image": "/images/img_1758.jpeg",
+      "category": "Fidget Toys"
     }
   ]
 }
