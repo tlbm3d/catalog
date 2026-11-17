@@ -5,6 +5,9 @@
     },
     {
       "name": "Fidget Toys - Twist"
+    },
+    {
+      "name": "Fidget Toys"
     }
   ],
   "products": [
@@ -23,6 +26,14 @@
       "price": 25,
       "image": "/catalog/images/img_1756.jpeg",
       "category": "Fidget Toys - Twist"
+    },
+    {
+      "active": true,
+      "name": "Gravity Knife | Faca da gravidade",
+      "description": "Faca que não machuca: volta para dentro!\nCréditos: DaFizzlez\nprintables.com/model/538540",
+      "price": 18,
+      "image": "/catalog/images/img_7824.jpeg",
+      "category": "Fidget Toys"
     }
   ]
 }
