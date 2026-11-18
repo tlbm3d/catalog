@@ -58,6 +58,14 @@
       "price": 28.5,
       "image": "/catalog/images/img_1761.jpeg",
       "category": "Utilidades | Banheiro"
+    },
+    {
+      "active": true,
+      "name": "Chaveiro de raposa",
+      "description": "Chaveiro fofo de raposa articulada! Fox keychain.\nCréditos: Pomeranc\nprintables.com/model/1694427",
+      "price": 13.9,
+      "image": "/catalog/images/img_1763.jpeg",
+      "category": "Chaveiros"
     }
   ]
 }
