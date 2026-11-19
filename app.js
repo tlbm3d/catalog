@@ -1,10 +1,7 @@
 const SCRIPT_URL = document.currentScript.src;
 const SITE_BASE_URL = new URL("./", SCRIPT_URL);
 
-const CATALOG_URL = new URL(
-  "content/catalogo.json",
-  SITE_BASE_URL
-).href;
+const CATALOG_URL = "/catalog/content/catalogo.json";
 
 const INSTAGRAM_URL = "https://www.instagram.com/tlbm.3d/";
 
