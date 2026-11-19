@@ -1,4 +1,11 @@
-const CATALOG_URL = "content/catalogo.json";
+const SCRIPT_URL = document.currentScript.src;
+const SITE_BASE_URL = new URL("./", SCRIPT_URL);
+
+const CATALOG_URL = new URL(
+  "content/catalogo.json",
+  SITE_BASE_URL
+).href;
+
 const INSTAGRAM_URL = "https://www.instagram.com/tlbm.3d/";
 
 const money = value =>
@@ -21,34 +28,65 @@ const template = document.getElementById("productTemplate");
 document.getElementById("year").textContent =
   new Date().getFullYear();
 
-async function loadCatalog() {
-  try {
-    const response = await fetch(
-      `${CATALOG_URL}?v=${Date.now()}`,
-      { cache: "no-store" }
-    );
 
-    if (!response.ok) {
-      throw new Error("Não foi possível carregar o catálogo.");
+async function loadCatalog() {
+  const loadingMessage = grid.querySelector(".empty-state");
+
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 12000);
+
+    let response;
+
+    try {
+      response = await fetch(CATALOG_URL, {
+        signal: controller.signal
+      });
+    } finally {
+      clearTimeout(timeout);
     }
 
-    catalog = await response.json();
-    catalog.categories ||= [];
-    catalog.products ||= [];
+    if (!response.ok) {
+      throw new Error(
+        `Erro HTTP ${response.status}: ${CATALOG_URL}`
+      );
+    }
+
+    const data = await response.json();
+
+    if (!data || !Array.isArray(data.products)) {
+      throw new Error("Formato inválido do catálogo JSON.");
+    }
+
+    catalog = {
+      categories: Array.isArray(data.categories)
+        ? data.categories
+        : [],
+      products: data.products
+    };
 
     renderFilters();
     renderProducts();
 
   } catch (error) {
-    grid.innerHTML =
-      '<div class="empty-state">Não foi possível carregar o catálogo agora. Tente atualizar a página.</div>';
+    console.error("Erro ao carregar catálogo:", error);
+
+    grid.innerHTML = `
+      <div class="empty-state">
+        <strong>Não foi possível carregar o catálogo.</strong><br>
+        Verifique sua conexão e tente novamente.
+        <br><br>
+        <button onclick="location.reload()">
+          Tentar novamente
+        </button>
+      </div>
+    `;
 
     document.getElementById("productCount").textContent =
-      "Catálogo indisponível";
-
-    console.error(error);
+      "Erro ao carregar produtos";
   }
 }
+
 
 function renderFilters() {
   const names = [
@@ -247,7 +285,14 @@ function renderProducts() {
 
     const img = card.querySelector("img");
 
-    img.src = product.image || "";
+    if (product.image) {
+      img.src = /^https?:\/\//i.test(product.image)
+        ? product.image
+        : new URL(
+            product.image.replace(/^\/+/, ""),
+            SITE_BASE_URL
+          ).href;
+    }
     img.alt = product.name || "Produto TLBM 3D";
 
     if (!product.image) {
