@@ -18,9 +18,6 @@ const grid = document.getElementById("productGrid");
 const filters = document.getElementById("categoryFilters");
 const template = document.getElementById("productTemplate");
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
-
 async function loadCatalog() {
   try {
     const response = await fetch(
