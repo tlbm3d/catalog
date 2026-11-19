@@ -18,6 +18,9 @@ const grid = document.getElementById("productGrid");
 const filters = document.getElementById("categoryFilters");
 const template = document.getElementById("productTemplate");
 
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
 async function loadCatalog() {
   try {
     const response = await fetch(
@@ -456,7 +459,7 @@ document.getElementById("checkoutButton").addEventListener(
       `Olá! Gostaria de fazer um pedido na TLBM 3D.\n\n` +
       `MEU PEDIDO:\n${lines.join("\n")}\n\n` +
       `Subtotal dos produtos: ${money(total)}\n\n` +
-      `Entrega: a combinar (Lalamove, Uber Envios ou Correios).\n\n` +
+      `Entrega: a combinar (local combinado, Uber Envios ou Correios).\n\n` +
       `Aguardo confirmação sobre disponibilidade, frete, pagamento e prazo.`;
 
     const status = document.getElementById("copyStatus");
