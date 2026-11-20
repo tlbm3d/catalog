@@ -117,3 +117,9 @@ nav a:hover,footer a:hover{color:var(--blue-bright)}
     object-position: center center;
   }
 }
+
+@media (min-width: 761px) {
+  .product-image img {
+    object-position: 50% 50% !important;
+  }
+}
